@@ -1,0 +1,11 @@
+USAGE: cristiano [OPTIONS]
+
+OPTIONS:
+    -n, --count COUNT                Number of times the art should be printed
+    -v, --version                    Show the version
+    -h, --help                       Show this help message
+
+EXAMPLES:
+  cristiano
+  cristiano -n10
+  cristiano -count=10
