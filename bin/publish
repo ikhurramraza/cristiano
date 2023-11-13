@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# if [ -z $(git status --porcelain) ]; then
+#   echo "Git status is not clean, please commit first."
+#   exit 1
+# fi
+
+current_version=$(bundle exec cristiano --version | cut -d' ' -f2)
+
+echo "Current version: $current_version"
+read -p "New version: " new_version
+
+branch_name="bump-${new_version//./}"
+git switch -c "$branch_name"
+
+sed -i "s/$current_version/$new_version/g" lib/cristiano/version.rb spec/cristiano/version_spec.rb
+
+bundle exec rake
