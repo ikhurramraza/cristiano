@@ -8,7 +8,6 @@ permissions:
 jobs:
   approve:
     runs-on: ubuntu-latest
-    if: github.actor == 'dependabot[bot]'
     env:
       PR_URL: ${{ github.event.pull_request.html_url }}
       GITHUB_TOKEN: ${{ secrets.AUTO_APPROVE_AND_MERGE_TOKEN }}
@@ -16,6 +15,3 @@ jobs:
     steps:
       - name: Enable auto-merge
         run: gh pr merge --auto --merge "$PR_URL"
-
-      - name: Approve the PR
-        run: gh pr review --approve "$PR_URL"
