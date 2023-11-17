@@ -14,4 +14,6 @@ jobs:
 
     steps:
       - name: Enable auto-merge
-        run: gh pr merge --auto --merge "$PR_URL"
+        run: |
+          echo "$PR_URL"
+          gh pr merge --auto --merge "$PR_URL"
