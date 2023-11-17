@@ -1,4 +1,4 @@
-name: Approve and merge dependabot PRs
+name: Dependabot
 
 on: pull_request
 
@@ -6,9 +6,11 @@ permissions:
   pull-requests: write
 
 jobs:
-  approve:
+  dependabot:
+    name: Auto approve and merge
     runs-on: ubuntu-latest
     if: github.actor == 'dependabot[bot]'
+
     env:
       PR_URL: ${{ github.event.pull_request.html_url }}
       GITHUB_TOKEN: ${{ secrets.AUTO_APPROVE_AND_MERGE_TOKEN }}
