@@ -11,21 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     if: github.actor == 'dependabot[bot]'
 
+    env:
+      PR_URL: ${{ github.event.pull_request.html_url }}
+      GITHUB_TOKEN: ${{ secrets.AUTO_APPROVE_AND_MERGE_TOKEN }}
+
     steps:
       - name: Enable auto-merge
-        env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          GH_TOKEN: ${{ secrets.DEPENDABOT_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.DEPENDABOT_TOKEN }}
-        run: |
-          echo "GITHUB_TOKEN: $GITHUB_TOKEN"
-          echo "GH_TOKEN: $GH_TOKEN"
-          gh pr merge --auto --merge "$PR_URL"
-
+        run: gh pr merge --auto --merge "$PR_URL"
 
       - name: Approve the PR
         run: gh pr review --approve "$PR_URL"
-        env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
-          GH_TOKEN: ${{ secrets.DEPENDABOT_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.DEPENDABOT_TOKEN }}
