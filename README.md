@@ -15,7 +15,7 @@ gem install cristiano
 2. Create and push tag to GitHub.
 
 ```bash
-git tag --sing -a "v[VERSION_TAG]" -m "[VERSION_TAG]"
+git tag --sign -a "v[VERSION_TAG]" -m "[VERSION_TAG]"
 
 git push origin "v[VERSION_TAG]"
 ```
