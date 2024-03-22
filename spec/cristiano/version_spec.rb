@@ -3,5 +3,5 @@
 RSpec.describe "Cristiano::VERSION" do
   subject(:version) { Cristiano::VERSION }
 
-  it { is_expected.to eq("1.0.0") }
+  it { is_expected.to eq("1.1.0") }
 end
