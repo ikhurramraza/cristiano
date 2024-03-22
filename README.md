@@ -1,5 +1,9 @@
 # Cristiano
 
+![Lint](https://github.com/ikhurramraza/cristiano/actions/workflows/lint.yml/badge.svg)
+![Test](https://github.com/ikhurramraza/cristiano/actions/workflows/test.yml/badge.svg)
+![Release](https://github.com/ikhurramraza/cristiano/actions/workflows/release.yml/badge.svg)
+
 Outputs ASCII art to celebrate the G.O.A.T. 🐐
 
 ## 💿 Installation
