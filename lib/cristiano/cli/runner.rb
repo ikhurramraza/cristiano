@@ -15,7 +15,7 @@ module Cristiano
         in version: true
           Parser.version.display
         else
-          options.count.times { ART.display }
+          options.count.times { print("\n#{ART}\n") }
         end
       end
 
