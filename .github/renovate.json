@@ -8,13 +8,16 @@
   "schedule": ["after 1am and before 5am"],
   "labels": ["dependencies"],
   "rangeStrategy": "update-lockfile",
+  "lockFileMaintenance": {
+    "automerge": true
+  },
   "packageRules": [
     {
       "matchManagers": ["github-actions"],
       "addLabels": ["actions"]
     },
     {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "pinDigest", "digest"],
       "automerge": true
     }
   ]
