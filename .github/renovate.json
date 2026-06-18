@@ -5,7 +5,6 @@
     ":dependencyDashboard",
     ":timezone(Europe/Berlin)"
   ],
-  "schedule": ["after 1am and before 5am"],
   "labels": ["dependencies"],
   "rangeStrategy": "update-lockfile",
   "lockFileMaintenance": {
