@@ -4,11 +4,11 @@ source "https://rubygems.org"
 
 gemspec
 
-gem "debug",               "~> 1.9.1"
+gem "debug",               "~> 1.11.0"
 gem "rake",                "~> 13.4.0"
 gem "rspec",               "~> 3.13.0"
-gem "rubocop",             "~> 1.62.0"
-gem "rubocop-performance", "~> 1.20.2"
-gem "rubocop-rake",        "~> 0.6.0"
-gem "rubocop-rspec",       "~> 2.27.1"
-gem "syntax_tree",         "~> 6.2.0"
+gem "rubocop",             "~> 1.88.0"
+gem "rubocop-performance", "~> 1.26.0"
+gem "rubocop-rake",        "~> 0.7.0"
+gem "rubocop-rspec",       "~> 2.31.0"
+gem "syntax_tree",         "~> 6.3.0"
