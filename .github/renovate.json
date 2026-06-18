@@ -3,7 +3,8 @@
   "extends": [
     "config:best-practices",
     ":dependencyDashboard",
-    ":timezone(Europe/Berlin)"
+    ":timezone(Europe/Berlin)",
+    "group:allNonMajor"
   ],
   "labels": ["dependencies"],
   "rangeStrategy": "update-lockfile",
