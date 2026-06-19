@@ -7,14 +7,12 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.3)
-    cgi (0.5.1)
     date (3.5.1)
     debug (1.11.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
     diff-lcs (1.6.2)
-    erb (4.0.4.1)
-      cgi (>= 0.3.3)
+    erb (6.0.4)
     io-console (0.8.2)
     irb (1.18.0)
       pp (>= 0.6.0)
